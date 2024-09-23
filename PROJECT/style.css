@@ -1,0 +1,291 @@
+body{
+   
+    font-family: 'Poppins';
+    overflow: hidden;
+    margin: 0;
+}
+.container{
+display: flex;
+justify-content: space-between;
+align-items:center;
+list-style: none;
+margin: 0px 35px 15px 35px;
+}
+.navbar{
+    display: flex;
+    align-items:center;
+    gap: 48px;
+}
+h1{
+    animation: aa 0.5s 1 linear;
+}
+@keyframes aa {
+    from{translate: 0px -100px;}
+    to{
+
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover{
+    color:blue;
+}
+li{    
+    animation: cc 0.5s 0.5s 1 linear forwards;
+    color: black;
+    opacity: 0;
+}
+@keyframes cc {
+    from{translate: 700px 0px;}
+    to{
+        opacity: 1;
+    }
+}
+.act{
+    color:blue;
+    text-shadow: 0px 0px 1px black;
+}
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 35px 15px 35px;
+}
+.right{
+    animation: dd 0.5s 1s 1 linear forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+@keyframes dd {
+    from{translate: 0px 700px;}
+    to{
+        opacity: 1;
+    }
+}
+.video{
+    width: 900px;
+    height: 500px;
+    background-color:black;
+    border-radius: 15px;
+
+}
+.btns{
+    display: flex;
+    width: 225px;
+    flex-wrap: wrap;
+    margin-top:30px ;
+    
+}
+
+.move {
+    width: 75px;
+    height: 65px;
+    font-size: 35px;
+    background-color: black;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+}
+.move::after{
+    content: '';
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tl::after{
+    content: '↖';
+}
+.tt::after{
+    content: '⬆';
+}
+.tr::after{
+    content: '↗';
+}
+.ll::after{
+    content: '⬅';
+}
+.rr::after{
+    content: '➡';
+}
+.bl::after{
+    content: '↙';
+}
+.bb::after{
+    content: '⬇';
+}
+.br::after{
+    content: '↘';
+}
+.move::before{
+    content: '';
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left,red,orange); 
+    border-radius: 10px;
+    animation: bb 2s linear infinite;
+}
+@keyframes bb {
+    from{}
+    to{filter: hue-rotate(360deg)}
+}
+.move:active::after{
+    background: transparent;
+}
+.stop{
+border-radius: 50%;
+width:75px;
+background-color: red;
+color: white;
+transition: 0.5s;
+transform: scale(0.9);
+}
+.stop:hover{
+    scale: 1.1;
+}
+
+.left{
+    animation: ee 0.5s 1.5s 1 linear forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: -200px;
+  
+
+}
+@keyframes ee {
+    from{translate: -100px 0px;}
+    to{
+        opacity: 1;
+    }
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.dis{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+}
+.sp{
+    width: 200px;
+    height: 70px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+.exp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.p1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left:30px;
+
+}
+.p2{
+
+    font-size: 35px;
+    font-weight: bold;
+    margin-left:30px; 
+}
+/* ------------------------------------------------------ */
+.car{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+.cs{
+    width: 430px;
+    height: 70px;
+    background-color: lightblue;
+    border-radius: 10px; 
+}
+.leftt{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    animation: ee 0.5s 1.5s 1 linear forwards;
+    opacity: 0;
+    margin-left: -30px;
+}
+@media (max-width:600px) {
+    body{
+        overflow: auto;
+    }
+    .container{
+        flex-direction: column;
+
+    }
+    .navbar{
+        gap:24px;
+    }
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+   
+    .car{
+        gap:25px;
+        margin-left: -25px;
+    }
+    .p1{
+        font-size: 20px;
+
+    }
+    .p2{
+        font-size: 20px; 
+        margin-left: 5px;
+    }
+    .dis{
+        
+        gap:10px;
+    }
+    .sp{
+        width: 100px;
+        height: 40px;
+     
+        border-radius: 5px;
+    }
+    .cs{
+        width: 180px;
+        height: 40px;
+
+        border-radius: 5px; 
+    }
+    .video{
+        width: 400px;
+        height: 420px;
+       
+    }
+    /* ======================================================================= */
+    .left{
+        margin-top: 55px;
+    }
+}
